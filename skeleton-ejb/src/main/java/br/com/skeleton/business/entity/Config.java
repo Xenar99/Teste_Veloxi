@@ -29,14 +29,14 @@ public class Config implements Serializable {
 
 
   @Override
-  public boolean equals(Object obj2) {
-    if (this == obj2)
+  public boolean equals(Object obj) {
+    if (this == obj)
       return true;
-    if (obj2 == null)
+    if (obj == null)
       return false;
-    if (getClass() != obj2.getClass())
+    if (getClass() != obj.getClass())
       return false;
-    Config other = (Config) obj2;
+    Config other = (Config) obj;
     return Objects.equals(mensagem, other.mensagem);
   }
 
