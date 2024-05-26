@@ -13,12 +13,7 @@ import jakarta.persistence.Table;
 @Table(name = "Entity_Equipamentos")
 public class Entity_Equipamentos {
 
-	private static final long serialVersionUID = 1L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	protected Long ID;
-
+	protected String ID;
 	protected String Equipamento;
 	protected String Descricao;
 	protected String DataAquisicao;
@@ -32,6 +27,8 @@ public class Entity_Equipamentos {
 	public Entity_Equipamentos(String iD, String equipamento, String descricao, String dataAquisicao, String valor,
 			String dataValidade) {
 		super();
+		
+		ID = iD;
 		Equipamento = equipamento;
 		Descricao = descricao;
 		DataAquisicao = dataAquisicao;
@@ -40,11 +37,11 @@ public class Entity_Equipamentos {
 
 	}
 
-	public Long getID() {
+	public String getID() {
 		return ID;
 	}
 
-	public void setID(Long iD) {
+	public void setID(String iD) {
 		ID = iD;
 	}
 

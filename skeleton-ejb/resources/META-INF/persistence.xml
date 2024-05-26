@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="DeggaPersistence">
+        <properties>
+            <!-- Configurações do banco de dados SQLite -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:C:\Users\Marcelo\git\Teste_Veloxi\skeleton-ejb\resources\database.db"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
+            <property name="javax.persistence.sql-load-script-source" value="META-INF/sql/dados-iniciais.sql"/>
+            <!-- Configurações do Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
