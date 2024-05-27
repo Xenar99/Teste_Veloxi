@@ -20,7 +20,7 @@
         <dependent-module archiveName="skeleton-war-1.war" deploy-path="/" handle="module:/resource/skeleton-war/skeleton-war">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="hibernate-core-6.5.2.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/orm/hibernate-core/6.5.2.Final/hibernate-core-6.5.2.Final.jar">
+        <dependent-module archiveName="hibernate-core-6.5.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/orm/hibernate-core/6.5.0.Final/hibernate-core-6.5.0.Final.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="jakarta.transaction-api-2.0.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar">
@@ -38,7 +38,7 @@
         <dependent-module archiveName="classmate-1.5.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="byte-buddy-1.14.15.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/net/bytebuddy/byte-buddy/1.14.15/byte-buddy-1.14.15.jar">
+        <dependent-module archiveName="byte-buddy-1.14.12.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="jakarta.xml.bind-api-4.0.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar">
@@ -71,7 +71,10 @@
         <dependent-module archiveName="jakarta.persistence-api-3.1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="sqlite-jdbc-3.34.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/xerial/sqlite-jdbc/3.34.0/sqlite-jdbc-3.34.0.jar">
+        <dependent-module archiveName="mysql-connector-java-8.0.28.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="protobuf-java-3.11.4.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
                                     
