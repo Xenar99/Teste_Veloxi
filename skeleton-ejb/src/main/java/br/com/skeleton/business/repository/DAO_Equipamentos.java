@@ -2,6 +2,7 @@ package br.com.skeleton.business.repository;
 
 import java.util.List;
 
+import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
@@ -12,6 +13,7 @@ import br.com.skeleton.business.entity.Entity_Equipamentos;
 
 public class DAO_Equipamentos {
 
+	@Inject
     private EntityManager manager;
 
     public DAO_Equipamentos(EntityManager manager) {

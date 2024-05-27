@@ -1,10 +1,6 @@
 package br.com.skeleton.business.entity;
-
-import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Objects;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
@@ -13,15 +9,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-
-
 @Entity
 @Table(name = "Entity_Equipamentos")
 public class Entity_Equipamentos {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column (name = "id")
-	protected Long id;
+	@Column(name = "id")
+	protected Long ID;
 	@Column(name = "Equipamento", nullable = false, length = 80)
 	protected String Equipamento;
 	@Column(name = "Descricao", nullable = false, length = 100)
@@ -42,11 +36,11 @@ public class Entity_Equipamentos {
 	}
 
 	public Long getID() {
-		return id;
+		return ID;
 	}
 
-	public void setID(Long iD) {
-		id = iD;
+	public void setID(Long id) {
+		ID = id;
 	}
 
 	public String getEquipamento() {
@@ -91,7 +85,7 @@ public class Entity_Equipamentos {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(ID);
 	}
 
 	@Override
@@ -103,13 +97,12 @@ public class Entity_Equipamentos {
 		if (getClass() != obj.getClass())
 			return false;
 		Entity_Equipamentos other = (Entity_Equipamentos) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(ID, other.ID);
 	}
 
 	@Override
 	public String toString() {
-		return "Entity_Equipamentos [id=" + id + "]";
+		return "Entity_Equipamentos [id=" + ID + "]";
 	}
-
 
 }

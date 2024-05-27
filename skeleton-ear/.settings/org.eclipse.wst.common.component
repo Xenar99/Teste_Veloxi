@@ -68,6 +68,51 @@
         <dependent-module archiveName="antlr4-runtime-4.13.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="weld-se-core-5.1.2.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/weld/se/weld-se-core/5.1.2.Final/weld-se-core-5.1.2.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="weld-environment-common-5.1.2.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/weld/environment/weld-environment-common/5.1.2.Final/weld-environment-common-5.1.2.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="weld-core-impl-5.1.2.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/weld/weld-core-impl/5.1.2.Final/weld-core-impl-5.1.2.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="weld-api-5.0.SP3.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/weld/weld-api/5.0.SP3/weld-api-5.0.SP3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="weld-spi-5.0.SP3.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/weld/weld-spi/5.0.SP3/weld-spi-5.0.SP3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.el-api-5.0.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/el/jakarta.el-api/5.0.1/jakarta.el-api-5.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="weld-lite-extension-translator-5.1.2.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/weld/weld-lite-extension-translator/5.1.2.Final/weld-lite-extension-translator-5.1.2.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.interceptor-api-2.1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/interceptor/jakarta.interceptor-api/2.1.0/jakarta.interceptor-api-2.1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-logging-processor-2.2.1.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/logging/jboss-logging-processor/2.2.1.Final/jboss-logging-processor-2.2.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-logging-annotations-2.2.1.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/logging/jboss-logging-annotations/2.2.1.Final/jboss-logging-annotations-2.2.1.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jdeparser-2.0.3.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/jdeparser/jdeparser/2.0.3.Final/jdeparser-2.0.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.enterprise.cdi-api-4.0.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/enterprise/jakarta.enterprise.cdi-api/4.0.1/jakarta.enterprise.cdi-api-4.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.enterprise.lang-model-4.0.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/enterprise/jakarta.enterprise.lang-model/4.0.1/jakarta.enterprise.lang-model-4.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jakarta.annotation-api-2.1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/annotation/jakarta.annotation-api/2.1.0/jakarta.annotation-api-2.1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jboss-classfilewriter-1.3.0.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jboss/classfilewriter/jboss-classfilewriter/1.3.0.Final/jboss-classfilewriter-1.3.0.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="jakarta.persistence-api-3.1.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>

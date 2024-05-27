@@ -3,7 +3,6 @@ package br.com.skeleton.business.repository;
 import java.time.LocalDate;
 import java.util.List;
 import br.com.skeleton.business.entity.Entity_Equipamentos;
-import br.com.skeleton.business.repository.DAO_Equipamentos;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -30,7 +29,7 @@ public class CamadaPersistencia {
         equipamento.setDataValidade(LocalDate.of(2025, 5, 27)); // Corrigindo o método de configuração da data
 
         // Salvando o Equipamento
-        daoEquipamentos.Excluir(equipamento);
+        daoEquipamentos.Salvar(equipamento);
 
         em.getTransaction().commit();
 
