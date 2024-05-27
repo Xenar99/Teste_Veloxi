@@ -40,7 +40,7 @@ public class DAO_Equipamentos {
     }
 
     public void Excluir(Entity_Equipamentos equipamento) {
-        equipamento = porId(equipamento.getID());
+        equipamento = porId(equipamento.getId());
         manager.remove(equipamento);
     }
 }

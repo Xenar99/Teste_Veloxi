@@ -1,9 +1,10 @@
 package br.com.skeleton.business.entity;
-import java.time.LocalDate;
+
+import java.util.Date;
 import java.util.Objects;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EntityManager;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -12,97 +13,97 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Entity_Equipamentos")
 public class Entity_Equipamentos {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	protected Long ID;
-	@Column(name = "Equipamento", nullable = false, length = 80)
-	protected String Equipamento;
-	@Column(name = "Descricao", nullable = false, length = 100)
-	protected String Descricao;
-	@Column(name = "DataAquisicao", length = 8)
-	protected LocalDate DataAquisicao;
-	@Column(name = "Valor", nullable = false, length = 20)
-	protected String Valor;
-	@Column(name = "DataValidade", length = 8)
-	protected LocalDate DataValidade;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    protected Long id;
+    
+    @Column(name = "Equipamento", nullable = false, length = 80)
+    protected String equipamento;
+    
+    @Column(name = "Descricao", nullable = false, length = 100)
+    protected String descricao;
+    
+    @Column(name = "DataAquisicao")
+    protected Date dataAquisicao;
+    
+    @Column(name = "Valor", nullable = false, length = 20)
+    protected String valor;
+    
+    @Column(name = "DataValidade")
+    protected Date dataValidade;
 
-	public Entity_Equipamentos() {
+    public Entity_Equipamentos() {
 
-	}
+    }
 
-	public Entity_Equipamentos(EntityManager em) {
-		// TODO Auto-generated constructor stub
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public Long getID() {
-		return ID;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setID(Long id) {
-		ID = id;
-	}
+    public String getEquipamento() {
+        return equipamento;
+    }
 
-	public String getEquipamento() {
-		return Equipamento;
-	}
+    public void setEquipamento(String equipamento) {
+        this.equipamento = equipamento;
+    }
 
-	public void setEquipamento(String equipamento) {
-		Equipamento = equipamento;
-	}
+    public String getDescricao() {
+        return descricao;
+    }
 
-	public String getDescricao() {
-		return Descricao;
-	}
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
-	public void setDescricao(String descricao) {
-		Descricao = descricao;
-	}
+    public Date getDataAquisicao() {
+        return dataAquisicao;
+    }
 
-	public LocalDate getDataAquisicao() {
-		return DataAquisicao;
-	}
+    public void setDataAquisicao(Date dataAquisicao) {
+        this.dataAquisicao = dataAquisicao;
+    }
 
-	public void setDataAquisicao(LocalDate dataAquisicao) {
-		DataAquisicao = dataAquisicao;
-	}
+    public String getValor() {
+        return valor;
+    }
 
-	public String getValor() {
-		return Valor;
-	}
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
 
-	public void setValor(String valor) {
-		Valor = valor;
-	}
+    public Date getDataValidade() {
+        return dataValidade;
+    }
 
-	public LocalDate getDataValidade() {
-		return DataValidade;
-	}
+    public void setDataValidade(Date dataValidade) {
+        this.dataValidade = dataValidade;
+    }
 
-	public void setDataValidade(LocalDate dataValidade) {
-		DataValidade = dataValidade;
-	}
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(ID);
-	}
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Entity_Equipamentos other = (Entity_Equipamentos) obj;
+        return Objects.equals(id, other.id);
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Entity_Equipamentos other = (Entity_Equipamentos) obj;
-		return Objects.equals(ID, other.ID);
-	}
-
-	@Override
-	public String toString() {
-		return "Entity_Equipamentos [id=" + ID + "]";
-	}
-
+    @Override
+    public String toString() {
+        return "Entity_Equipamentos [id=" + id + "]";
+    }
 }

@@ -1,5 +1,6 @@
 package br.com.skeleton.business.repository;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 import br.com.skeleton.business.entity.Entity_Equipamentos;
@@ -24,9 +25,9 @@ public class CamadaPersistencia {
         Entity_Equipamentos equipamento = new Entity_Equipamentos();
         equipamento.setEquipamento("Multímetro 2");
         equipamento.setDescricao("Multímetro 34461A Keysight");
-        equipamento.setDataAquisicao(LocalDate.of(2024, 5, 27));
+        //equipamento.setDataAquisicao(Date(2024, 5, 27));
         equipamento.setValor("10000");
-        equipamento.setDataValidade(LocalDate.of(2025, 5, 27)); // Corrigindo o método de configuração da data
+        //equipamento.setDataValidade(Date(2025, 5, 27)); // Corrigindo o método de configuração da data
 
         // Salvando o Equipamento
         daoEquipamentos.Salvar(equipamento);
