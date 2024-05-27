@@ -1,95 +1,105 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-<f:view contentType="text/html" encoding="UTF-8">
-	<ui:insert name="metadata"></ui:insert>
-	<h:head>
-		<title>Taskboard - A JakartaEE Faces Sample</title>
-		<!-- Required meta tags -->
-		<meta charset="utf-8"></meta>
-		<meta name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
-		<!-- styles -->
-		<link rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-			crossorigin="anonymous" />
-		<link
-			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-			rel="stylesheet"
-			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-			crossorigin="anonymous" />
-		<link href="#{request.contextPath}/resources/css/main.css"
-			rel="stylesheet" />
-		<!--            <h:outputStylesheet library="css" name="main.css"></h:outputStylesheet>-->
-		<ui:insert name="headIncludes"></ui:insert>
-	</h:head>
-	<h:body styleClass="d-flex flex-column h-100">
-		<main role="main" class="flex-shrink-0">
-		<div class="container">
-			<h1 class="page-header display-3">
-				<ui:insert name="pageTitle"></ui:insert>
-			</h1>
-			<div class="row">
-				<div class="col-md-12">
-					<h:form id="form" role="form" class="form">
-						<h:messages showDetail="true" />
-						<div class="form-group row">
-							<label class="col-sm-2 col-form-label" for="propriedadeEndereco">Mensagem:</label>
-							<div class="col-sm-10">
-								<h:inputText type="text" id="mensagem" class="form-control"
-									value="#{mBeanEnvio.config.mensagem}" required="true"
-									placeholder="#{mBeanEnvio.config.mensagem}">
-								</h:inputText>
-							</div>
-						</div>
-						<div class="form-group row">
-							<label class="col-sm-2 col-form-label" for="submitTask">Enviar:</label>
-							<div class="col-sm-10">
-								<h:commandButton id="submitTask" type="submit"
-									styleClass="btn btn-sm btn-primary"
-									action="#{mBeanEnvio.enviar}" value="Enviar" ajax="true"
-									update="@form:erro"></h:commandButton>
-							</div>
-						</div>
-						<div class="form-group row">
-							<label class="col-sm-2 col-form-label" for="mensagemRetorno">Retorno:</label>
-							<div class="col-sm-10">
-								<h:inputTextarea value="#{mBeanEnvio.mensagemRetorno}" id="mensagemRetorno"
-									class="form-control">
-								</h:inputTextarea>
-							</div>
-						</div>
-					</h:form>
-				</div>
-			</div>
-			<ui:insert name="content" />
-		</div>
-		</main>
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-			crossorigin="anonymous">
-			/** stop autoclosing **/
-		</script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-			crossorigin="anonymous">
-			/** stop autoclosing **/
-		</script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-			crossorigin="anonymous">
-			/** stop autoclosing **/
-		</script>
-		<ui:insert name="bodyIncludes"></ui:insert>
-	</h:body>
-</f:view>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Dégga</title>
+</head>
+<body>
+
+    <!-- Tema -->
+    <div class="container">
+        <br>
+        <h1>Gestão de equipamentos Dégga Ltda (empresa fictícia)</h1>
+        <br>
+        <button type="button" class="custom_button_cadastrar">
+
+            <span class="custom_button_cadastrar__text">Cadastrar</span>
+            <span class="custom_button_cadastrar__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
+                    <line y2="19" y1="5" x2="12" x1="12"></line>
+                    <line y2="12" y1="12" x2="19" x1="5"></line>
+                </svg>
+            </span>
+
+        </button>
+            <br>
+        <div class="custom-table">
+            <!-- Conteúdo dentro do tema -->
+            <table id="dataGrid">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Equipamentos</th>
+                        <th>Descrição</th>
+                        <th>Data de aquisição</th>
+                        <th>Valor do equipamento (R$)</th>
+                        <th>Data de validade</th>
+                    </tr>
+                </thead>
+                <tbody id="equipamentos-table-body">
+                    <tr>
+                        <td>1</td>
+                        <td>Multímetro digital</td>
+                        <td>Multímetro digital 34661A</td>
+                        <td>18/04/2023</td>
+                        <td>10000</td>
+                        <td>18/04/2024</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Multímetro digital</td>
+                        <td>Multímetro digital 34666A</td>
+                        <td>18/04/2021</td>
+                        <td>5000</td>
+                        <td>18/04/2022</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("/api/equipamentos")
+                .then(response => response.json())
+                .then(data => {
+                    let tableBody = document.getElementById("equipamentos-table-body");
+                    data.forEach(equipamento => {
+                        let row = document.createElement("tr");
+
+                        let idCell = document.createElement("td");
+                        idCell.textContent = equipamento.id;
+                        row.appendChild(idCell);
+
+                        let equipamentoCell = document.createElement("td");
+                        equipamentoCell.textContent = equipamento.equipamento;
+                        row.appendChild(equipamentoCell);
+
+                        let descricaoCell = document.createElement("td");
+                        descricaoCell.textContent = equipamento.descricao;
+                        row.appendChild(descricaoCell);
+
+                        let dataAquisicaoCell = document.createElement("td");
+                        dataAquisicaoCell.textContent = equipamento.dataAquisicao;
+                        row.appendChild(dataAquisicaoCell);
+
+                        let valorCell = document.createElement("td");
+                        valorCell.textContent = equipamento.valor;
+                        row.appendChild(valorCell);
+
+                        let dataValidadeCell = document.createElement("td");
+                        dataValidadeCell.textContent = equipamento.dataValidade;
+                        row.appendChild(dataValidadeCell);
+
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+
+    </script>
+    
+</body>
 </html>
