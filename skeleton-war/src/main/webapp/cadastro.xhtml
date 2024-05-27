@@ -5,41 +5,69 @@
 <h:head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Novo HTML</title>
+	<title>Cadastro</title>
 </h:head>
 <h:body>
-	<h1>Bem-vindo à nova página HTML!</h1>
-
+	<h1>Cadastro de equipamentos!</h1>
 	<h:form>
-
 		<h:panelGrid columns="2">
-			<h:outputLabel value="Equipamento: " for="Equipamento"/>
-			<h:inputText id="Equipamento" value="#{gestaoEquipamentosBean.equipamentos.equipamento}"/>
 
-			<h:outputLabel value="Descrição: " for="Descricao"/>
-			<h:inputText id="Descricao" value="#{gestaoEquipamentosBean.equipamentos.descricao}"/>
+			<h:outputLabel value="Equipamento: " for="Equipamento" />
+			<h:panelGroup>
+				<h:inputText id="Equipamento"
+					value="#{gestaoEquipamentosBean.equipamentos.equipamento}"
+					required="true" label="   Data de Aquisição">
+				</h:inputText>
+				<h:message for="Equipamento" />
+			</h:panelGroup>
 
-			<h:outputLabel value="Data de Aquisição: " for="dataAquisicao"/>
-			<h:inputText id="dataAquisicao" value="#{gestaoEquipamentosBean.equipamentos.dataAquisicao}">
-			    <f:convertDateTime pattern="dd/MM/yyyy" />
-			</h:inputText>
+			<h:outputLabel value="Descrição: " for="Descricao" />
+			<h:panelGroup>
+				<h:inputText id="Descricao"
+					value="#{gestaoEquipamentosBean.equipamentos.descricao}"
+					required="true" label="   Descrição">
+				</h:inputText>
+				<h:message for="Descricao" />
+			</h:panelGroup>
 
-			<h:outputLabel value="Valor(R$): " for="Valor"/>
-			<h:inputText id="Valor" value="#{gestaoEquipamentosBean.equipamentos.valor}"/>
+			<h:outputLabel value="Data de Aquisição: " for="dataAquisicao" />
+			<h:panelGroup>
+				<h:inputText id="dataAquisicao"
+					value="#{gestaoEquipamentosBean.equipamentos.dataAquisicao}"
+					required="true" label="   Data de Aquisição">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:inputText>
+				<h:message for="dataAquisicao"></h:message>
+			</h:panelGroup>
 
-			<h:outputLabel value="Data de Validade: "  for="DataValidade"/>
-			<h:inputText id="DataValidade" value="#{gestaoEquipamentosBean.equipamentos.dataValidade}">
-			    <f:convertDateTime pattern="dd/MM/yyyy" />
-			</h:inputText>
+			<h:outputLabel value="Valor(R$): " for="Valor" />
+			<h:panelGroup>
+				<h:inputText id="Valor"
+					value="#{gestaoEquipamentosBean.equipamentos.valor}"
+					required="true" label="   Valor(R$)">
+					<f:convertNumber pattern="#,##0.00" />
+					<f:validateDoubleRange minimum="0" />
+				</h:inputText>
+				<h:message for="Valor"></h:message>
+			</h:panelGroup>
 
-			<h:outputText value=""/>
-			<h:commandButton value="Cadastrar" actionListener="#{gestaoEquipamentosBean.salvar()}" />
+			<h:outputLabel value="Data de Validade: " for="DataValidade" />
+			<h:panelGroup>
+				<h:inputText id="DataValidade"
+					value="#{gestaoEquipamentosBean.equipamentos.dataValidade}"
+					required="true" label="   Data de Validade">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:inputText>
+				<h:message for="DataValidade"></h:message>
+			</h:panelGroup>
+
+			<h:outputText value="" />
+
 		</h:panelGrid>
+		<br></br>
+		<h:commandButton value="Cadastrar"
+			actionListener="#{gestaoEquipamentosBean.salvar()}" />
 	</h:form>
-
-	<script>
-
-    </script>
-
+	
 </h:body>
 </html>
