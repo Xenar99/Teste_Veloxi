@@ -1,47 +1,44 @@
 package br.com.skeleton.business.entity;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
+
 @Entity
 @Table(name = "Entity_Equipamentos")
 public class Entity_Equipamentos {
-
-	protected String ID;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	protected Long ID;
+	@Column(name = "Equipamento", nullable = false, length = 80)
 	protected String Equipamento;
+	@Column(name = "Descricao", nullable = false, length = 100)
 	protected String Descricao;
-	protected String DataAquisicao;
+	@Column(name = "DataAquisicao", nullable = false, length = 8)
+	protected LocalDate DataAquisicao;
+	@Column(name = "Valor", nullable = false, length = 20)
 	protected String Valor;
-	protected String DataValidade;
+	@Column(name = "DataValidade", nullable = false, length = 8)
+	protected LocalDate DataValidade;
 
 	public Entity_Equipamentos() {
 
 	}
 
-	public Entity_Equipamentos(String iD, String equipamento, String descricao, String dataAquisicao, String valor,
-			String dataValidade) {
-		super();
-		
-		ID = iD;
-		Equipamento = equipamento;
-		Descricao = descricao;
-		DataAquisicao = dataAquisicao;
-		Valor = valor;
-		DataValidade = dataValidade;
-
-	}
-
-	public String getID() {
+	public Long getID() {
 		return ID;
 	}
 
-	public void setID(String iD) {
+	public void setID(Long iD) {
 		ID = iD;
 	}
 
@@ -61,11 +58,11 @@ public class Entity_Equipamentos {
 		Descricao = descricao;
 	}
 
-	public String getDataAquisicao() {
+	public LocalDate getDataAquisicao() {
 		return DataAquisicao;
 	}
 
-	public void setDataAquisicao(String dataAquisicao) {
+	public void setDataAquisicao(LocalDate dataAquisicao) {
 		DataAquisicao = dataAquisicao;
 	}
 
@@ -77,11 +74,11 @@ public class Entity_Equipamentos {
 		Valor = valor;
 	}
 
-	public String getDataValidade() {
+	public LocalDate getDataValidade() {
 		return DataValidade;
 	}
 
-	public void setDataValidade(String dataValidade) {
+	public void setDataValidade(LocalDate dataValidade) {
 		DataValidade = dataValidade;
 	}
 
@@ -106,6 +103,5 @@ public class Entity_Equipamentos {
 	public String toString() {
 		return "Entity_Equipamentos [ID=" + ID + "]";
 	}
-
 
 }
