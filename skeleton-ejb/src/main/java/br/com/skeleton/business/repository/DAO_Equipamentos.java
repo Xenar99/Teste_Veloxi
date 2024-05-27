@@ -13,21 +13,21 @@ public class DAO_Equipamentos {
 
 	private static final long serialVersionUID = 1L;
 
-	private EntityManager manager;
+	private static EntityManager manager;
 
 	public DAO_Equipamentos() {
 
 	}
 
 	public DAO_Equipamentos (EntityManager manager) {
-		this.manager = manager;
+		DAO_Equipamentos.manager = manager;
 	}
 	
 	public Entity_Equipamentos  porId(long id) {
 		return manager.find(Entity_Equipamentos.class, id);
 	}
 	
-	public List<Entity_Equipamentos> pesquisar (String Equipamento){
+	public static List<DAO_Equipamentos> pesquisar (String Equipamento){
 		TypedQuery<Entity_Equipamentos> query = manager
 				.createQuery("from Entity_Equipamentos where Equipamento like :Equipamento", Entity_Equipamentos.class);
 		query.setParameter("Equipamento", Equipamento + "%");
