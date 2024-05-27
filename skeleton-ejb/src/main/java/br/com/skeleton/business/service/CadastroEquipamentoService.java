@@ -10,11 +10,11 @@ public class CadastroEquipamentoService {
 
 	@Transacional
 	public void salvar(Entity_Equipamentos equipamento) {
-		equipamentos.Salvar(equipamento);
+		equipamentos.salvar(equipamento);
 	}
 
 	@Transacional
 	public void excluir(Entity_Equipamentos equipamento) {
-		equipamentos.Excluir(equipamento);
+		equipamentos.excluir(equipamento);
 	}
 }

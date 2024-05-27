@@ -1,144 +1,56 @@
-
-.container {
-    width: 100%;
-    height: 100vh;
-    background-color: #111111;
-    background-image: linear-gradient(
-      32deg,
-      rgba(8, 8, 8, 0.74) 30px,
-      transparent
-    );
-    background-size: 60px 60px;
-    background-position: -5px -5px;
-    
-  }
-  
-  .custom-table {
-    width: 80vw auto;
-    max-width: 80vw;
-    border-collapse: collapse;
-    box-shadow: 20 10px 10px rgba(0, 0, 0, 0.1);
-    background-color: #dbd7d7;
-    border-radius: 1px;
-    border-spacing: 0;
-    margin: 0 auto;
-    overflow: hidden;
-
-}
-
-.custom-table thead th {
-    padding: 12px 15px;
-    width: 80vw;
-    background-color: #007bff;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-top: 2px solid #000000;
-    border-left: 2px solid #000000;
-    border-right: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-    font-size: 14px;
-    
-}
-
-/* Estilo para as células */
-.custom-table td {
-    
-    margin: 0;
-    padding: 5px 15px;
-    width: 80vw;
-    text-align: center;
-    border-top: 1px solid #000000;
-    border-left: 1px solid #000000;
-    border-right: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-
-}
-
-.custom-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.custom-table tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-.custom-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    
-}
-
-h1 {
-    text-align: center;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
-
 .custom_button_cadastrar {
-    position: relative;
-    width: 154px;
-    height: 38px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border: 1px solid #34974d;
-    background-color: #3aa856;
-    margin-top: 15px; margin-left: 170vh; margin-right: 15px;
+  position: relative;
+  width: 154px;
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #34974d;
+  background-color: #3aa856;
+  margin-top: 15px;
+  margin-right: 15px; /* Ajustado para definir a margem à direita */
+}
 
-  }
-  
-  .custom_button_cadastrar, custom_button_cadastrar__icon, .custom_button_cadastrar__text {
-    transition: all 0.3s;
-  }
-  
-  .custom_button_cadastrar .custom_button_cadastrar__text {
-    transform: translateX(30px);
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  .custom_button_cadastrar .custom_button_cadastrar__icon {
-    position: absolute;
-    transform: translateX(109px);
-    height: 100%;
-    width: 39px;
-    background-color: #34974d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .custom_button_cadastrar .svg {
-    width: 30px;
-    stroke: #fff;
-  }
-  
-  .custom_button_cadastrar:hover {
-    background: #34974d;
-  }
-  
-  .custom_button_cadastrar:hover custom_button_cadastrar__text {
-    color: white;
-  }
-  
-  .custom_button_cadastrar:hover .custom_button_cadastrar__icon {
-    width: 148px;
-    transform: translateX(0);
-  }
-  
-  .custom_button_cadastrar:active .custom_button_cadastrar__icon {
-    background-color: #2e8644;
-  }
-  
-  .custom_button_cadastrar:active {
-    border: 1px solid #2e8644;
-  }
+.custom_button_cadastrar__text {
+  transition: all 0.3s;
+  color: #fff;
+  font-weight: 600;
+}
+
+.custom_button_cadastrar__icon {
+  position: absolute;
+  right: 5px; /* Ajustado para posicionar o ícone à direita */
+  height: 100%;
+  width: 39px;
+  background-color: #34974d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom_button_cadastrar .svg {
+  width: 24px;
+  stroke: #fff;
+}
+
+.custom_button_cadastrar:hover {
+  background: #34974d;
+}
+
+.custom_button_cadastrar:hover .custom_button_cadastrar__text {
+  color: white;
+}
+
+.custom_button_cadastrar:hover .custom_button_cadastrar__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.custom_button_cadastrar:active .custom_button_cadastrar__icon {
+  background-color: #2e8644;
+}
+
+.custom_button_cadastrar:active {
+  border: 1px solid #2e8644;
+}
