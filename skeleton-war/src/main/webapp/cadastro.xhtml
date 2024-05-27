@@ -1,32 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novo HTML</title>
-</head>
-<body>
-    <h1>Bem-vindo à nova página HTML!</h1>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Novo HTML</title>
+</h:head>
+<h:body>
+	<h:head>
+		<h1>Bem-vindo à nova página HTML!</h1>
 
-    <label for="equipamento">Equipamento:</label>
-    <input type="text">
-    <p><label for="descricao">Descrição:</label>
-        <input type="text"></p>
-   
-    <p><label for="dataAquisicao">Data de aquisição:</label>
-        <input type="text"></p>
+		<h:form>
 
-    <p><label for="valor">Valor do equipamento(R$):</label>
-        <input type="text"></p>
+			<h:panelGrid columns="6">
+				<label for="equipamento">Equipamento:</label>
+				<input type="text" />
+				
+					<h:outputLabel value="Equipamento: " for="Equipamento"/>
+					<h:inputText id="Equipamento"/>
+					
+		            <h:outputLabel value="Descrição: " for="Descricao"/>
+					<h:inputText id="Descricao"/>
+				
+				    <h:outputLabel value="Data de Aquisição: " for="dataAquisicao"/>
+					<h:inputText id="dataAquisicao"/>
+					
+					<h:outputLabel value="Valor(R$): " for="Valor"/>
+					<h:inputText id="Valor"/>
+					
+					<h:outputLabel value="Data de Validade "  for="DataValidade"/>
+					<h:inputText id="DataValidade"/>
+				
+				    <h:outputlabel/>
+					<h:commandButton Value="Cadastrar" />
+			</h:panelGrid>
+		</h:form>
+		
+		<script>
 
-    <p><label for="validade">Data de validade:</label>
-        <input type="text"></p>
+            </script>
 
-<p><input type="submit">
-    <script>
-        
-    </script>
-</p>
-
-</body>
+	</h:head>
+</h:body>
 </html>
