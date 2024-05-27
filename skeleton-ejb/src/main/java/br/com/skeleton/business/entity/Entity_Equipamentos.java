@@ -2,10 +2,12 @@ package br.com.skeleton.business.entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -18,28 +20,33 @@ import jakarta.persistence.Table;
 public class Entity_Equipamentos {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	protected Long ID;
+	@Column (name = "id")
+	protected Long id;
 	@Column(name = "Equipamento", nullable = false, length = 80)
 	protected String Equipamento;
 	@Column(name = "Descricao", nullable = false, length = 100)
 	protected String Descricao;
-	@Column(name = "DataAquisicao", nullable = false, length = 8)
+	@Column(name = "DataAquisicao", length = 8)
 	protected LocalDate DataAquisicao;
 	@Column(name = "Valor", nullable = false, length = 20)
 	protected String Valor;
-	@Column(name = "DataValidade", nullable = false, length = 8)
+	@Column(name = "DataValidade", length = 8)
 	protected LocalDate DataValidade;
 
 	public Entity_Equipamentos() {
 
 	}
 
+	public Entity_Equipamentos(EntityManager em) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Long getID() {
-		return ID;
+		return id;
 	}
 
 	public void setID(Long iD) {
-		ID = iD;
+		id = iD;
 	}
 
 	public String getEquipamento() {
@@ -84,7 +91,7 @@ public class Entity_Equipamentos {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(ID);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -96,12 +103,13 @@ public class Entity_Equipamentos {
 		if (getClass() != obj.getClass())
 			return false;
 		Entity_Equipamentos other = (Entity_Equipamentos) obj;
-		return Objects.equals(ID, other.ID);
+		return Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
-		return "Entity_Equipamentos [ID=" + ID + "]";
+		return "Entity_Equipamentos [id=" + id + "]";
 	}
+
 
 }
