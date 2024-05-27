@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Cadastro</title>
 </h:head>
 <h:body>
-	<h1>Cadastro de equipamentos!</h1>
+	<h1>Cadastro de equipamentos</h1>
 	<h:form>
 		<h:panelGrid columns="2">
 
-			<h:outputLabel value="Equipamento: " for="Equipamento" />
+			<p:outputLabel value="Equipamento: " for="Equipamento" />
 			<h:panelGroup>
-				<h:inputText id="Equipamento"
+				<p:inputText id="Equipamento"
 					value="#{gestaoEquipamentosBean.equipamentos.equipamento}"
 					required="true" label="   Data de Aquisição">
-				</h:inputText>
-				<h:message for="Equipamento" />
+				</p:inputText>
+				<p:message for="Equipamento" />
 			</h:panelGroup>
 
-			<h:outputLabel value="Descrição: " for="Descricao" />
+			<p:outputLabel value="Descrição: " for="Descricao" />
 			<h:panelGroup>
-				<h:inputText id="Descricao"
+				<p:inputText id="Descricao"
 					value="#{gestaoEquipamentosBean.equipamentos.descricao}"
 					required="true" label="   Descrição">
-				</h:inputText>
-				<h:message for="Descricao" />
+				</p:inputText>
+				<p:message for="Descricao" />
 			</h:panelGroup>
 
-			<h:outputLabel value="Data de Aquisição: " for="dataAquisicao" />
+			<p:outputLabel value="Data de Aquisição: " for="dataAquisicao" />
 			<h:panelGroup>
-				<h:inputText id="dataAquisicao"
+				<p:inputText id="dataAquisicao"
 					value="#{gestaoEquipamentosBean.equipamentos.dataAquisicao}"
 					required="true" label="   Data de Aquisição">
 					<f:convertDateTime pattern="dd/MM/yyyy" />
-				</h:inputText>
-				<h:message for="dataAquisicao"></h:message>
+				</p:inputText>
+				<p:message for="dataAquisicao"></p:message>
 			</h:panelGroup>
 
-			<h:outputLabel value="Valor(R$): " for="Valor" />
+			<p:outputLabel value="Valor(R$): " for="Valor" />
 			<h:panelGroup>
-				<h:inputText id="Valor"
+				<p:inputText id="Valor"
 					value="#{gestaoEquipamentosBean.equipamentos.valor}"
 					required="true" label="   Valor(R$)">
 					<f:convertNumber pattern="#,##0.00" />
 					<f:validateDoubleRange minimum="0" />
-				</h:inputText>
-				<h:message for="Valor"></h:message>
+				</p:inputText>
+				<p:message for="Valor"></p:message>
 			</h:panelGroup>
 
-			<h:outputLabel value="Data de Validade: " for="DataValidade" />
+			<p:outputLabel value="Data de Validade: " for="DataValidade" />
 			<h:panelGroup>
-				<h:inputText id="DataValidade"
+				<p:inputText id="DataValidade"
 					value="#{gestaoEquipamentosBean.equipamentos.dataValidade}"
 					required="true" label="   Data de Validade">
 					<f:convertDateTime pattern="dd/MM/yyyy" />
-				</h:inputText>
-				<h:message for="DataValidade"></h:message>
+				</p:inputText>
+				<p:message for="DataValidade"></p:message>
 			</h:panelGroup>
 
 			<h:outputText value="" />
 
 		</h:panelGrid>
 		<br></br>
-		<h:commandButton value="Cadastrar"
-			actionListener="#{gestaoEquipamentosBean.salvar()}" />
+		<p:commandButton value="Cadastrar"
+			actionListener="#{gestaoEquipamentosBean.salvar()}"
+			update="@form" />
 	</h:form>
 	
 </h:body>

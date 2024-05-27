@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+		xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<meta charset="UTF-8" />
@@ -32,47 +33,29 @@
 			<!-- Conteúdo dentro do tema -->
 			<h:dataTable value="#{[0, 0, 0, 0]}">
 
-				<h:column>
-					<f:facet name="header">
-						ID
-					</f:facet>
+				<p:column headerText="ID">
                     <h:outputText value="1"/>
-				</h:column>
+				</p:column>
 				
-				<h:column>
-					<f:facet name="header">
-						Equipamento
-					</f:facet>
+				<p:column headerText="Equipamento">
                     <h:outputText value="Multímetro"/>
-				</h:column>
+				</p:column>
 				
-				<h:column>
-					<f:facet name="header">
-						Descrição
-					</f:facet>
+				<p:column headerText="Descrição">
                     <h:outputText value="asdasdasd"/>
-				</h:column>
+				</p:column>
 				
-				<h:column>
-					<f:facet name="header">
-						Data de Aquisição
-					</f:facet>
+				<p:column headerText="Data de aquisição">
                     <h:outputText value="01/01/2023"/>
-				</h:column>
+				</p:column>
 				
-				<h:column>
-					<f:facet name="header">
-						Valor(R$)
-					</f:facet>
+				<p:column headerText="Valor (R$)">
                     <h:outputText value="10.000"/>
-				</h:column>
+				</p:column>
 				
-				<h:column>
-					<f:facet name="header">
-						Data de Validade
-					</f:facet>
+				<p:column headerText="Data de validade">
                     <h:outputText value="01/01/2025"/>
-				</h:column>
+				</p:column>
 				
 
 			</h:dataTable>

@@ -34,6 +34,11 @@ public class DAO_Equipamentos {
         TypedQuery<Entity_Equipamentos> query= manager.createQuery(criteriaQuery);
         return query.getResultList();
     }
+    
+    public List<Entity_Equipamentos> todos() {
+
+        return manager.createQuery(" from Equipamento", Entity_Equipamentos.class).getResultList();
+    }
 
     public Entity_Equipamentos Salvar(Entity_Equipamentos equipamento) {
         return manager.merge(equipamento);
