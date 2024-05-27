@@ -14,19 +14,19 @@
 
 		<h:panelGrid columns="2">
 			<h:outputLabel value="Equipamento: " for="Equipamento"/>
-			<h:inputText id="Equipamento"/>
+			<h:inputText id="Equipamento" value="#{gestaoEquipamentosBean.equipamentos.equipamento}"/>
 
 			<h:outputLabel value="Descrição: " for="Descricao"/>
-			<h:inputText id="Descricao"/>
+			<h:inputText id="Descricao" value="#{gestaoEquipamentosBean.equipamentos.descricao}"/>/>
 
 			<h:outputLabel value="Data de Aquisição: " for="dataAquisicao"/>
-			<h:inputText id="dataAquisicao"/>
+			<h:inputText id="dataAquisicao" value="#{gestaoEquipamentosBean.equipamentos.dataAquisicao}"/>
 
 			<h:outputLabel value="Valor(R$): " for="Valor"/>
-			<h:inputText id="Valor"/>
-
+			<h:inputText id="Valor"value="#{gestaoEquipamentosBean.equipamentos.valor}"/>/
+			
 			<h:outputLabel value="Data de Validade: "  for="DataValidade"/>
-			<h:inputText id="DataValidade"/>
+			<h:inputText id="DataValidade" value="#{gestaoEquipamentosBean.equipamentos.dataValidade}"/>
 			
 			<h:outputText value=""/>
 			<h:commandButton value="Cadastrar" />
