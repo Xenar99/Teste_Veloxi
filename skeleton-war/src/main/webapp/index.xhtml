@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"
-xmlns:h="http://xmlns.jcp.org/jsf/html">
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Dégga</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/main.css" />
+	<title>Dégga</title>
 </h:head>
 <body>
 
-    <!-- Tema -->
-    <div class="container">
-        <br />
-        <h1>Gestão de equipamentos Dégga Ltda aaa(empresa fictícia)</h1>
-        <br />
-        <button type="button" class="custom_button_cadastrar">
-            <span class="custom_button_cadastrar__text">Cadastrar</span>
-            <span class="custom_button_cadastrar__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
+	<!-- Tema -->
+	<div class="container">
+		<br />
+		<h1>Gestão de equipamentos Dégga Ltda(empresa fictícia)</h1>
+		<br />
+		<button type="button" class="custom_button_cadastrar">
+			<span class="custom_button_cadastrar__text">Cadastrar</span> <span
+				class="custom_button_cadastrar__icon"> <svg
+					xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24"
+					stroke-width="2" stroke-linejoin="round" stroke-linecap="round"
+					stroke="currentColor" height="24" fill="none" class="svg">
                     <line y2="19" y1="5" x2="12" x1="12" />
                     <line y2="12" y1="12" x2="19" x1="5" />
                 </svg>
-            </span>
-        </button>
-        <br />
-        <div class="custom-table">
-            <!-- Conteúdo dentro do tema -->
-            <h:form>
-            <table id="dataGrid">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Equipamentos</th>
-                        <th>Descrição</th>
-                        <th>Data de aquisição</th>
-                        <th>Valor do equipamento (R$)</th>
-                        <th>Data de validade</th>
-                    </tr>
-                </thead>
-                <tbody id="equipamentos-table-body">
-                    <tr>
-                        <td>1</td>
-                        <td>Multímetro digital</td>
-                        <td>Multímetro digital 34661A</td>
-                        <td>18/04/2023</td>
-                        <td>10000</td>
-                        <td>18/04/2024</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Multímetro digital</td>
-                        <td>Multímetro digital 34666A</td>
-                        <td>18/04/2021</td>
-                        <td>5000</td>
-                        <td>18/04/2022</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+			</span>
+		</button>
+		<br />
+		<div class="custom-table">
+			<!-- Conteúdo dentro do tema -->
+			<h:dataTable value="#{[0, 0, 0, 0]}">
+
+				<h:column>
+					<f:facet name="header">
+						IDaa
+					</f:facet>
+                    <h:outputText value="1"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						Equipamento
+					</f:facet>
+                    <h:outputText value="Multímetro"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						Descrição
+					</f:facet>
+                    <h:outputText value="asdasdasd"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						Data de Aquisição
+					</f:facet>
+                    <h:outputText value="01/01/2023"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						Valor(R$)
+					</f:facet>
+                    <h:outputText value="10.000"/>
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						Data de Validade
+					</f:facet>
+                    <h:outputText value="01/01/2025"/>
+				</h:column>
+				
+
+			</h:dataTable>
+
+		</div>
+	</div>
 
 </body>
 </html>

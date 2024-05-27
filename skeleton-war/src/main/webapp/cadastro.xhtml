@@ -8,39 +8,34 @@
 	<title>Novo HTML</title>
 </h:head>
 <h:body>
-	<h:head>
-		<h1>Bem-vindo à nova página HTML!</h1>
+	<h1>Bem-vindo à nova página HTML!</h1>
 
-		<h:form>
+	<h:form>
 
-			<h:panelGrid columns="6">
-				<label for="equipamento">Equipamento:</label>
-				<input type="text" />
-				
-					<h:outputLabel value="Equipamento: " for="Equipamento"/>
-					<h:inputText id="Equipamento"/>
-					
-		            <h:outputLabel value="Descrição: " for="Descricao"/>
-					<h:inputText id="Descricao"/>
-				
-				    <h:outputLabel value="Data de Aquisição: " for="dataAquisicao"/>
-					<h:inputText id="dataAquisicao"/>
-					
-					<h:outputLabel value="Valor(R$): " for="Valor"/>
-					<h:inputText id="Valor"/>
-					
-					<h:outputLabel value="Data de Validade "  for="DataValidade"/>
-					<h:inputText id="DataValidade"/>
-				
-				    <h:outputlabel/>
-					<h:commandButton Value="Cadastrar" />
-			</h:panelGrid>
-		</h:form>
-		
-		<script>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Equipamento: " for="Equipamento"/>
+			<h:inputText id="Equipamento"/>
 
-            </script>
+			<h:outputLabel value="Descrição: " for="Descricao"/>
+			<h:inputText id="Descricao"/>
 
-	</h:head>
+			<h:outputLabel value="Data de Aquisição: " for="dataAquisicao"/>
+			<h:inputText id="dataAquisicao"/>
+
+			<h:outputLabel value="Valor(R$): " for="Valor"/>
+			<h:inputText id="Valor"/>
+
+			<h:outputLabel value="Data de Validade: "  for="DataValidade"/>
+			<h:inputText id="DataValidade"/>
+			
+			<h:outputText value=""/>
+			<h:commandButton value="Cadastrar" />
+		</h:panelGrid>
+	</h:form>
+
+	<script>
+
+    </script>
+
 </h:body>
 </html>
