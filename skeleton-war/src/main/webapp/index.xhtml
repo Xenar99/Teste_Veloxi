@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"
+xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>Dégga</title>
-</head>
+</h:head>
 <body>
 
     <!-- Tema -->
     <div class="container">
-        <br>
-        <h1>Gestão de equipamentos Dégga Ltda (empresa fictícia)</h1>
-        <br>
+        <br />
+        <h1>Gestão de equipamentos Dégga Ltda aaa(empresa fictícia)</h1>
+        <br />
         <button type="button" class="custom_button_cadastrar">
-
             <span class="custom_button_cadastrar__text">Cadastrar</span>
             <span class="custom_button_cadastrar__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
-                    <line y2="19" y1="5" x2="12" x1="12"></line>
-                    <line y2="12" y1="12" x2="19" x1="5"></line>
+                    <line y2="19" y1="5" x2="12" x1="12" />
+                    <line y2="12" y1="12" x2="19" x1="5" />
                 </svg>
             </span>
-
         </button>
-            <br>
+        <br />
         <div class="custom-table">
             <!-- Conteúdo dentro do tema -->
             <table id="dataGrid">
@@ -59,47 +59,6 @@
             </table>
         </div>
     </div>
-    <script>
 
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("/api/equipamentos")
-                .then(response => response.json())
-                .then(data => {
-                    let tableBody = document.getElementById("equipamentos-table-body");
-                    data.forEach(equipamento => {
-                        let row = document.createElement("tr");
-
-                        let idCell = document.createElement("td");
-                        idCell.textContent = equipamento.id;
-                        row.appendChild(idCell);
-
-                        let equipamentoCell = document.createElement("td");
-                        equipamentoCell.textContent = equipamento.equipamento;
-                        row.appendChild(equipamentoCell);
-
-                        let descricaoCell = document.createElement("td");
-                        descricaoCell.textContent = equipamento.descricao;
-                        row.appendChild(descricaoCell);
-
-                        let dataAquisicaoCell = document.createElement("td");
-                        dataAquisicaoCell.textContent = equipamento.dataAquisicao;
-                        row.appendChild(dataAquisicaoCell);
-
-                        let valorCell = document.createElement("td");
-                        valorCell.textContent = equipamento.valor;
-                        row.appendChild(valorCell);
-
-                        let dataValidadeCell = document.createElement("td");
-                        dataValidadeCell.textContent = equipamento.dataValidade;
-                        row.appendChild(dataValidadeCell);
-
-                        tableBody.appendChild(row);
-                    });
-                })
-                .catch(error => console.error('Error fetching data:', error));
-        });
-
-    </script>
-    
 </body>
 </html>
